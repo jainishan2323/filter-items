@@ -1,0 +1,50 @@
+@import 'variables.scss';
+@import 'reset.scss';
+@import 'cardShadow.scss';
+@import 'filters.scss';
+@import 'itemList.scss';
+
+body {
+    font-family: 'Roboto', sans-serif;       
+    background-color: $light-grey;
+}
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+}
+
+input:focus{
+    outline: none;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.clear-filters {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: $grey;
+    font-weight: bold;
+    text-transform: uppercase;
+    &:hover {
+        color: $orange;
+    }
+}
+
+.filter-container {
+    padding-bottom: 10px;
+    border-bottom: 1px solid $medium-grey;
+}

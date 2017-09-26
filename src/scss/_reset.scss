@@ -1,0 +1,105 @@
+// Reset File Base
+// --------------------------------------------------------------------------------
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+
+* {
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+	line-height: 1.1;
+	outline: none;
+	-webkit-overflow-scrolling: touch;
+
+	&:before,
+	&:after {
+		background-repeat: no-repeat;
+		box-sizing: border-box;
+		outline: none;
+	}
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+html, body {
+	height: 100%;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote,
+q {
+
+	&:before,
+	&:after {
+		content: none;
+	}
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+strong {
+	font-weight: 600;
+}
+
+a,
+.link {
+	cursor: pointer;
+	text-decoration: none;
+
+	&.disabled,
+	[disabled],
+	&.readonly,
+	[readonly] {
+		cursor: default;
+		pointer-events: none;
+		text-decoration: none;
+	}
+}
+
+// Safari supports event propogation only on 'clickable' items.
+// This is needed for closing elements when clicking outside of them.
+// see http://stackoverflow.com/a/17490775/1861047
+@media not all and (any-pointer: fine)  {
+
+	body {
+		cursor: pointer;
+	}
+}
+
+.hidden {
+	display: none !important;
+}
+
+.pos-alternate {
+	margin-left: auto;
+}
+// --------------------------------------------------------------------------------

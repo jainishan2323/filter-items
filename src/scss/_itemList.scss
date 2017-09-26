@@ -1,0 +1,25 @@
+.item-list {
+    .item {
+        background-color: $white;
+        display: flex;
+        margin: 10px 0;
+        padding: 5px 25px;
+        align-items: center;
+        img {
+            width: 70px;
+            height: 70px;
+            background-color: $grey;
+        }      
+    }
+
+    .item-specs {
+        margin-left: 40px;
+        h3 {
+            color: $dark-grey;
+            font-weight: normal;
+        }
+        p {
+            color: $medium-grey;
+        }
+    }
+}

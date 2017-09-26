@@ -1,0 +1,85 @@
+.filter-facet {
+    display: inline-block;
+    margin-right: 15px;
+    &.disabled {
+        box-shadow: none;
+        &:hover {
+            box-shadow: none;
+        }
+    }
+
+    .filter-dropdown {
+        background-color: $white;
+        border: none;
+        padding: 10px;
+        font-size: 14px;
+        cursor: pointer;
+        position: relative;
+        padding: 10px 30px 10px 10px;
+        &:before {
+            background-image: url('../images/arrow-down.png');
+            content: "";
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: cover;
+            right: 10px;
+            top: 12px;
+        }
+        &.active {
+            &:before {
+                transform: rotate(180deg);
+            }
+        }
+        &.disabled {
+            pointer-events: none;
+            background-color: $medium-grey;
+        }
+    }
+    .filter-list {
+        width: 250px;
+        position: absolute;
+        z-index: 99;
+        background: $white;
+        font-size: 14px;
+        display: none;
+
+        &.active {
+            display: block;
+        }
+
+        input[type="text"] {
+            border: none;
+            width: 90%;
+            padding: 10px;
+        }
+
+        .filter-param-list {
+            border-top: 1px solid $grey;
+            color: $dark-grey;
+            padding: 5px;
+            max-height: 150px;
+            overflow: auto;
+            div {
+                padding: 5px 0;
+            }
+        }
+    }
+}
+
+.filter-criteria {
+    padding: 10px;
+    font-size: 14px;
+    color: $grey;
+    text-transform: uppercase;
+    .filter-criteria-item {
+        background: $white;
+        margin: 0 10px;
+        padding: 5px 20px;
+        border-radius: 15px;
+        color: $orange;
+        font-weight: 600;
+        font-size: 12px;
+    }
+}
